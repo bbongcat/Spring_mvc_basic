@@ -14,8 +14,8 @@ public class MvcApplication {
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/views/");
-		resolver.setSuffix(".jsp");
+		resolver.setPrefix("/WEB-INF/views/"); //접두어
+		resolver.setSuffix(".jsp"); //접미어
 		return resolver;
 	}
 
