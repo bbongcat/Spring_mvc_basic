@@ -1,3 +1,4 @@
+  
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,7 +12,6 @@
 <h1>게시글 등록</h1>
 
 <form action="/board/write" method="post">
-
 	<p>
 		# 작성자: <input type="text" name="writer"><br>
 		# 제목: <input type="text" name="title"><br>
@@ -24,8 +24,3 @@
 <a href="/board/list">글 목록보기</a>
 </body>
 </html>
-
-
-
-
-

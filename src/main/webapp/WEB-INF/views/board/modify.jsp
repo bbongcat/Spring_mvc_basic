@@ -9,14 +9,14 @@
 </head>
 <body>
 
-<h1>xxx번 게시물 내용 수정</h1>
+<h1>${article.boardNo}번 게시물 내용 수정</h1>
 <form action="/board/modify" method="post">
 	<input type="hidden" name="boardNo" value="${article.boardNo}">
 	<p>
 		# 글번호: ${article.boardNo}<br>
 		# 작성자: <input type="text" name="writer" value="${article.writer}"><br>
 		# 제목: <input type="text" name="title" value="${article.title}"><br>
-		# 내용: <textarea rows="3" name="content">${article.content}</textarea>	
+		# 내용: <textarea rows="3" name="content">${article.content}</textarea>
 		<br>
 		<input type="submit" value="수정">
 	</p>
@@ -27,6 +27,3 @@
 
 </body>
 </html>
-
-
-

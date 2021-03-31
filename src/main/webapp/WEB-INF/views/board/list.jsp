@@ -46,15 +46,11 @@
 </c:if>
 
 <p>
-	<a href="/web/board/write">게시글 작성하기</a>
+	<a href="/board/write">게시글 작성하기</a>
 </p>
 
 </body>
 </html>
-
-
-
-
 
 
 

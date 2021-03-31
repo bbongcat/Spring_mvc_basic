@@ -16,9 +16,7 @@
 	# 작성자: ${article.writer}<br>
 	# 제목: ${article.title}<br>
 	# 내용:
-	<textarea rows="3" disabled>
-	        ${article.content}
-	</textarea>
+	<textarea rows="3" disabled>${article.content}</textarea>
 </p>
 
 <a href="/board/list">글 목록보기</a>&nbsp;
@@ -26,6 +24,3 @@
 
 </body>
 </html>
-
-
-

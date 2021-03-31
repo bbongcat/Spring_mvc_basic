@@ -1,8 +1,9 @@
+
 package com.spring.mvc.springweb.board.repository;
 
 import com.spring.mvc.springweb.board.domain.Board;
 
-import java.util.*;
+import java.util.List;
 
 public interface BoardRepository {
 
@@ -20,6 +21,5 @@ public interface BoardRepository {
 
     //게시글 수정
     void modifyArticle(Board article);
-
 
 }
