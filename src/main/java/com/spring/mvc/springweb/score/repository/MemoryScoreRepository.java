@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+@Repository("memoryScoreRepo")
 public class MemoryScoreRepository implements ScoreRepository {
 
     //학생들의 점수 정보 객체(Score)를 저장할 Map 생성(메모리DB 역할)
