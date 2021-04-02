@@ -2,6 +2,7 @@ package com.spring.mvc.springweb.score.service;
 
 import com.spring.mvc.springweb.score.domain.Grade;
 import com.spring.mvc.springweb.score.domain.Score;
+import com.spring.mvc.springweb.score.mapper.ScoreMyBatisMapper;
 import com.spring.mvc.springweb.score.repository.ScoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,16 +14,19 @@ import java.util.List;
 public class ScoreService {
 
     private final ScoreRepository scoreRepository;
+    private final ScoreMyBatisMapper scoreMapper;
 
     @Autowired
-    public ScoreService(@Qualifier("jdbcScoreRepo") ScoreRepository scoreRepository) {
+    public ScoreService(@Qualifier("templateScoreRepo") ScoreRepository scoreRepository, ScoreMyBatisMapper scoreMapper) {
         this.scoreRepository = scoreRepository;
+        this.scoreMapper = scoreMapper;
     }
 
     //점수를 저장하기 전에 총점, 평균 계산 처리
     public void insertService(Score score) {
         score.calcTotalAvg();
-        scoreRepository.insertScore(score);
+//        scoreRepository.insertScore(score);
+        scoreMapper.insertScore(score);
     }
 
     //점수를 조회한 후 컨트롤러에게 학점정보를 추가 리턴한다

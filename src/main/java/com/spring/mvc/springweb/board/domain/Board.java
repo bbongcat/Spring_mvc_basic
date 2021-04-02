@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Setter @Getter
 @AllArgsConstructor
 @ToString
@@ -17,7 +19,6 @@ public class Board {
     private String content; //글내용
 
     public Board() {
-        System.out.println("board constructor call!!");
         this.boardNo = ++sequence;
     }
 
