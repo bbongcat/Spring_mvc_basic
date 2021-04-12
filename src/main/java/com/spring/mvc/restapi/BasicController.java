@@ -3,9 +3,7 @@ package com.spring.mvc.restapi;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @RestController
 public class BasicController {
@@ -47,6 +45,16 @@ public class BasicController {
         p.setMyCar(car);
 
         return p;
+    }
+
+    @GetMapping("/basic/map")
+    public Map<String, Person> personMap() {
+        Map<String, Person> map = new HashMap<>();
+        map.put("kim", new Person("김둘리", 20));
+        map.put("park", new Person("박도우너", 15));
+        map.put("lee", new Person("이희동", 5));
+
+        return map;
     }
 
 }
